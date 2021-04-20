@@ -1,5 +1,5 @@
 <!-- index.html (Mid_108B32079 project) -->
-{% extends "base.html" %}
+
 {% extends "base.html" %}
 {% block title %}我有話要說{% endblock %}
 {% block content %}
@@ -33,6 +33,15 @@
         </div>
     </div>
 </div>
+
+<script>
+function go_delete(id){
+    var user_pass = document.getElementById('user_pass').value;
+    if (user_pass != "") {
+        var usr = '/' + id + '/' + user_pass;
+        window.location = usr;
+    }
+}
 
 <div class="row">
 {% for p in posts %}
